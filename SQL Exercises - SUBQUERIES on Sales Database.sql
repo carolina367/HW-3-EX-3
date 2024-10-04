@@ -103,7 +103,9 @@ EMP_IDNO EMP_FNAME       EMP_LNAME         EMP_DEPT
    839139 Maria           Foster                  57
 
 
-/* 1. Explain in plain English in one sentence what is the output of the folloiwng block of SQL commands: */
+/* 1. Explain in plain English in one sentence what is the output of the folloiwng block of SQL commands:
+Display all the order information for sales made by the salesman paul adam
+ */
 
 SELECT *
   FROM orders
@@ -112,7 +114,9 @@ SELECT *
                          WHERE name = 'Paul Adam');
 
 
-/* 2. Explain in plain English in one sentence what is the output of the folloiwng block of SQL commands: *.'
+/* 2. Explain in plain English in one sentence what is the output of the folloiwng block of SQL commands: 
+Display all the order information for sales made by salesmen in london
+*/
 
 SELECT *
   FROM orders
@@ -123,7 +127,10 @@ SELECT *
 
 
 
-/* 3 (bonus). Explain in plain English in one sentence what is the output of the folloiwng block of SQL commands: */
+/* 3 (bonus). Explain in plain English in one sentence what is the output of the folloiwng block of SQL commands: 
+sum the purchase amount of orders grouped by order date. filter orders where the total purchase amount for that date is 
+less than or equal to 1000 more than the max individual purchse on that date. 
+*/
 
 SELECT ord_date,
        SUM(purch_amt)
