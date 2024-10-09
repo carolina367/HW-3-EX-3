@@ -290,9 +290,9 @@ SELECT
 
 /* 3. Write a query in SQL to display all departments including those where does not have any employee. */
 
-SELECT *
+SELECT 
+  departments.department_name, 
+  employees.employee_id
   FROM departments
- /*  LEFT JOIN 
-    ON 
-*/
-
+LEFT JOIN employees
+ON departments.department_id = employees.department_id;
